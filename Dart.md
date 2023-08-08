@@ -99,17 +99,48 @@ numero = "uno";
 
 ### Simbología:
 
-- "***?***": significa que esta variable puede ser nula (no se puede multiplicar por algo nulo, a menos que especifiquemos el valor que tiene).
+- "***?***": significa que esta variable puede ser nula (no se puede multiplicar por algo nulo, a menos que especifiquemos el valor que tiene.
 
+```dart
+void main(List<String> args){ 
+  int? a = 10; // ? para indicar que puede ser nulo
+  int? b = null; 
 
+  if(a == b){ // si a es igual a b
+    print("a es igual a b"); // imprime
+} else { // si no
+    print("a no es igual a b"); // imprime
+  }
+}
+
+// salida: a no igual a b
+```
 
 - "***!***": es como que a huevo corra, no importa si es null.
 
+```dart
+void main() {
+  String? name = "Alice"; // Declaración de una variable que podría ser nula
+  
+  // name = null; // Si se descomenta esta línea, name será nulo
+  int length = name!.length; // Si name es nulo, se lanza una excepción
+  
+  print("La longitud del nombre es: $length"); // Si name es nulo, no se ejecuta esta línea
+}
 
+// salida: La longitud del nombre es: 5
+```
 
 - "***$***": se utiliza para inyectar o insertar variables.
 
+```dart
+void main(List<String> args){ 
+  String nombre = "Jahir";
+  print("Hola $nombre"); // el signo de $ es para concatenar variables
+}
 
+// Salida: Hola Jahir
+```
 
 - "***{}***": sirven para obtener el producto de las variables.
 
